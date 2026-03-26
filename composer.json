@@ -1,5 +1,5 @@
 {
-    "name": "decoda/nfe-core-client",
+    "name": "decoda/nfse-core-client",
     "description": "Biblioteca base para integracao com NFS-e Padrao Nacional (SEFIN Nacional).",
     "type": "library",
     "license": "MIT",
@@ -12,8 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Nfse\\Core\\": "src/",
-            "Config\\": "src/Config/"
+            "Nfse\\Core\\": "src/"
         }
     },
     "autoload-dev": {
@@ -25,10 +24,7 @@
         "phpunit/phpunit": "^10.5"
     },
     "scripts": {
-        "test": "phpunit"
-    },
-    "suggest": {
-        "codeigniter4/framework": "Necessario para usar os adapters de Config e Services do CI4."
+        "test": "phpunit --testdox"
     },
     "minimum-stability": "stable",
     "prefer-stable": true

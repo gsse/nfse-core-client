@@ -1,4 +1,4 @@
-# nfe-core-client
+# nfse-core-client
 
 Biblioteca base em PHP para chamadas HTTP da NFS-e Padrao Nacional (SEFIN Nacional), pensada para ser dependencia de uma extensao maior.
 
@@ -6,7 +6,7 @@ Biblioteca base em PHP para chamadas HTTP da NFS-e Padrao Nacional (SEFIN Nacion
 
 - Fornecer classes e metodos para requisicoes da API NFS-e.
 - Isolar transporte, endpoints, certificado e contratos.
-- Evitar acoplamento com CodeIgniter no nucleo.
+- Evitar acoplamento com frameworks no nucleo.
 
 ## Operacoes suportadas no cliente
 
@@ -19,7 +19,7 @@ Biblioteca base em PHP para chamadas HTTP da NFS-e Padrao Nacional (SEFIN Nacion
 ## Instalacao
 
 ```bash
-composer require decoda/nfe-core-client
+composer require decoda/nfse-core-client
 ```
 
 ## Uso rapido
@@ -113,29 +113,4 @@ $client = new SefinNacionalClient(
     emitSchemaPath: $catalog->emitSchemaPath(),
     eventSchemaPath: $catalog->eventSchemaPath(),
 );
-```
-
-## Adapter CI4 (opcional)
-
-Para uso no CodeIgniter 4, configure `Config\NfseCore` e use `service('nfseCore')`.
-
-Arquivo de configuracao da biblioteca:
-
-```php
-<?php
-
-namespace Config;
-
-class NfseCore extends \CodeIgniter\Config\BaseConfig
-{
-    public string $environment = 'production_restricted';
-    public string $certificatePath = '/caminho/certificado.pfx';
-    public string $certificatePassphrase = 'senha';
-    public int $timeoutSeconds = 30;
-    public bool $validateXml = true;
-    public string $emitSchemaPath = ''; // opcional, override manual
-    public string $eventSchemaPath = ''; // opcional, override manual
-    public string $xsdBasePath = '/caminho/xsd'; // ex.: /caminho/xsd/v1_00/*.xsd
-    public string $xsdVersion = 'v1_00';
-}
 ```
