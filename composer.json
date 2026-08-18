@@ -1,7 +1,7 @@
 {
-    "name": "decoda/nfse-core-client",
-    "description": "Biblioteca base para integracao com NFS-e Padrao Nacional (SEFIN Nacional).",
-    "type": "library",
+    "name": "apex-dextra/fiscal-monorepo",
+    "description": "Monorepo de bibliotecas PHP para documentos fiscais eletronicos.",
+    "type": "project",
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -12,12 +12,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Nfse\\Core\\": "src/"
+            "Fiscal\\Core\\": "packages/fiscal-core/src/",
+            "Nfse\\Client\\": "packages/nfse-client/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nfse\\Core\\Tests\\": "tests/"
+            "Fiscal\\Core\\Tests\\": "packages/fiscal-core/tests/",
+            "Nfse\\Client\\Tests\\": "packages/nfse-client/tests/"
         }
     },
     "require-dev": {

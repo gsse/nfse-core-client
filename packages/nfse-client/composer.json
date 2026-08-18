@@ -1,0 +1,21 @@
+{
+    "name": "apex-dextra/nfse-client",
+    "description": "Cliente PHP para integracao com a NFS-e Padrao Nacional.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "apex-dextra/fiscal-core": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nfse\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nfse\\Client\\Tests\\": "tests/"
+        }
+    }
+}

@@ -4,8 +4,11 @@
          bootstrap="vendor/autoload.php"
          colors="true">
     <testsuites>
-        <testsuite name="nfse-core-client">
-            <directory>tests</directory>
+        <testsuite name="fiscal-core">
+            <directory>packages/fiscal-core/tests</directory>
+        </testsuite>
+        <testsuite name="nfse-client">
+            <directory>packages/nfse-client/tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
